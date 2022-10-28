@@ -3,7 +3,7 @@ import Recherche from './components/recherche';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
      <Recherche/>
     </div>
   );

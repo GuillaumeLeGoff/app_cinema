@@ -1,3 +1,10 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #d3ba91;
+}
 .App {
   text-align: center;
 }
@@ -38,15 +45,16 @@
 }
 
 .film {
-  border:6px solid blue;
+  border:6px solid rgb(196, 196, 199);
     border-radius:15px;
     padding:7px;
     font-family: Arial;
     font-size: 16px;
-    display: block;
+    
     margin-bottom: 20px;
     margin-left: 20%;
     margin-right: 20%;
+    display: inline-flex;
 }
 
 .list {
@@ -59,4 +67,24 @@
   align-items: center;
 }
 
-
+.recherhce{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.bouton{
+  margin-top: 1%;
+}
+img{
+  height: 20%;
+  width: 30%;
+  float: left;
+}
+.info{
+  margin: 10px;
+}
+p{
+  margin-bottom: 0px;
+}
+.bouton{
+  margin: top 10px; ;
+}

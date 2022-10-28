@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../App.css";
+import { Button } from 'react-bootstrap';
 
 function Recherche() {
   const [FilmChercher, setFilmChercher] = useState("");
@@ -30,17 +31,18 @@ function Recherche() {
 
   return (
     <div>
-      <div>
-        <label>Recherche film</label>
+      <div className="recherhce">
+        <label>Recherche film:   </label>
+        <br></br>
         <input
           type="texte"
-          placeholder="Enter email"
+          placeholder="Film"
           onChange={(e) => onChangeRecherche(e)}
         />
-
-        <button onClick={(e) => rechercheFilm(e)} variant="primary">
+        <br></br>
+        <Button className="bouton" onClick={(e) => rechercheFilm(e)} variant="primary">
           Recherche
-        </button>
+        </Button>
       </div>
       <div className="saisie">
         {FilmResult.map((film) => (
@@ -48,8 +50,10 @@ function Recherche() {
             <img
               src={"https://image.tmdb.org/t/p/w500" + film.poster_path}
             ></img>
+            <div className="info">
             <h4>{film.original_title}</h4>
             <p>{film.overview}</p>
+            </div>
           </div>
         ))}
       </div>
