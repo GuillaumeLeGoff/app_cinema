@@ -5,7 +5,6 @@ import "../App.css";
 function Recherche() {
   const [FilmChercher, setFilmChercher] = useState("");
   const [FilmResult, setFilmResult] = useState([]);
-  const [Picture,setPicture]= useState("");
 
   function rechercheFilm() {
     getFilm(FilmChercher);
@@ -26,33 +25,29 @@ function Recherche() {
       )
       .then((result) => {
         setFilmResult(result.data.results);
-        
-         
       });
   }
 
   return (
     <div>
       <div>
-        
-          <label>Recherche film</label>
-          <input
-            type="texte"
-            placeholder="Enter email"
-            onChange={(e) => onChangeRecherche(e)}
-          />
-        
-        <button
-          onClick={(e) => rechercheFilm(e)}
-          variant="primary"
-        >
+        <label>Recherche film</label>
+        <input
+          type="texte"
+          placeholder="Enter email"
+          onChange={(e) => onChangeRecherche(e)}
+        />
+
+        <button onClick={(e) => rechercheFilm(e)} variant="primary">
           Recherche
         </button>
       </div>
       <div className="saisie">
         {FilmResult.map((film) => (
           <div className="film">
-            <img src="https://image.tmdb.org/t/p/w500${film.poster_path}"></img>
+            <img
+              src={"https://image.tmdb.org/t/p/w500" + film.poster_path}
+            ></img>
             <h4>{film.original_title}</h4>
             <p>{film.overview}</p>
           </div>
